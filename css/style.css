@@ -1,0 +1,104 @@
+/* Layout styling */
+body {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font-family: 'Bitcount Prop Double';*/
+  color: #333;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 1.6;
+
+    background-color: #ffccff; /* a bright pink-lavender */
+  background-image: radial-gradient(circle, #ffe066 20%, transparent 20%), 
+                    radial-gradient(circle, #ff6f61 20%, transparent 20%);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+}
+
+a {
+  color: #b22222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  color: #8b0000;
+}
+
+h3 {
+  color: #4b0082;
+  margin-top: 1.5em;
+}
+
+/* Image section */
+.image-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+img {
+  height: 250px;
+  border-radius: 8px;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Flex layout for 2 columns */
+.layout-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1.5em;
+  background-color:rgb(147, 147, 197);
+}
+
+li {
+  font-size: 1em;
+}
+
+.directions {
+  margin-bottom: 30px;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  border-top: 2px solid #999;
+  margin: 40px 0;
+}
+
+div {
+
+  border: double rgb(93, 230, 75);
+  font: Bitcount_Prop_Double;
+
+}
+
+/* Right-aligned footer note */
+[align="right"] {
+  font-size: 0.9em;
+  color: #777;
+  font-style: italic;
+}
