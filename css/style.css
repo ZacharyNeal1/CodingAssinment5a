@@ -1,104 +1,76 @@
-/* Layout styling */
-body {
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /*font-family: 'Bitcount Prop Double';*/
-  color: #333;
+/* style.css */
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
   line-height: 1.6;
-
-    background-color: #ffccff; /* a bright pink-lavender */
-  background-image: radial-gradient(circle, #ffe066 20%, transparent 20%), 
-                    radial-gradient(circle, #ff6f61 20%, transparent 20%);
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
+  padding: 20px;
 }
 
-a {
-  color: #b22222;
-  text-decoration: none;
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  border: 2px solid black;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2 {
-  color: #8b0000;
-}
-
-h3 {
-  color: #4b0082;
-  margin-top: 1.5em;
-}
-
-/* Image section */
-.image-section {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-img {
-  height: 250px;
-  border-radius: 8px;
-}
-
-figure {
+/* Row 1: Header */
+.header {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #f8f8f8;
   text-align: center;
 }
 
-figcaption {
-  font-style: italic;
-  font-size: 0.9em;
-  color: #555;
+/* Row 2: Middle Section with three columns */
+.row-two {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
 
-/* Flex layout for 2 columns */
-.layout-wrapper {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+/* Row 3: Bottom section with three equal columns */
+.row-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid black;
+  padding: 1px;
 }
 
-.column {
-  flex: 1;
-  min-width: 250px;
+/* Row 4: Footer */
+.footer {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
 }
 
-ul, ol {
-  padding-left: 20px;
-  margin-bottom: 1.5em;
-  background-color:rgb(147, 147, 197);
+/* Column box styles */
+.col {
+  border-right: 1px solid black;
+  padding: 20px;
 }
 
-li {
-  font-size: 1em;
+/* Remove last border-right on rows */
+.row-two .col:last-child,
+.row-three .col:last-child {
+  border-right: none;
 }
 
-.directions {
-  margin-bottom: 30px;
+/* Headings for clarity */
+h1, h2, h3 {
+  margin-bottom: 10px;
 }
 
-/* Horizontal Rule */
-hr {
-  border: none;
-  border-top: 2px solid #999;
-  margin: 40px 0;
-}
-
-div {
-
-  border: double rgb(93, 230, 75);
-  font: Bitcount_Prop_Double;
-
-}
-
-/* Right-aligned footer note */
-[align="right"] {
-  font-size: 0.9em;
-  color: #777;
-  font-style: italic;
+/* Optional: Make image responsive */
+img {
+  max-width: 100%;
+  height: auto;
 }
