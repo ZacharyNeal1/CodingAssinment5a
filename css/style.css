@@ -1,76 +1,101 @@
-/* style.css */
-
+/* Global box‑model rules */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Layout containers */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
 }
 
-.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  border: 2px solid black;
+/* Header and Footer full‑width rows */
+header, footer {
+  width: 100%;
+  background: #ececec;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
 }
 
-/* Row 1: Header */
-.header {
-  border: 1px solid black;
-  padding: 10px;
-  background-color: #f8f8f8;
+footer {
+  border-top: 2px solid #ccc;
+}
+
+/* Row container */
+.row {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Generic column */
+.column {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+/* Second row columns: left, center, right proportions */
+#colLeft {
+  width: 20%;
+}
+#colCenter {
+  width: 50%;
   text-align: center;
 }
-
-/* Row 2: Middle Section with three columns */
-.row-two {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 10px;
+#colRight {
+  width: 30%;
 }
 
-/* Row 3: Bottom section with three equal columns */
-.row-three {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid black;
-  padding: 1px;
+/* Third row columns: equal widths */
+#row3 .column {
+  width: 33.3333%;
 }
 
-/* Row 4: Footer */
-.footer {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: center;
-  background-color: #f8f8f8;
+/* Specific styling */
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin-bottom: 0.5rem;
+}
+nav ul li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Column box styles */
-.col {
-  border-right: 1px solid black;
-  padding: 20px;
-}
-
-/* Remove last border-right on rows */
-.row-two .col:last-child,
-.row-three .col:last-child {
-  border-right: none;
-}
-
-/* Headings for clarity */
-h1, h2, h3 {
-  margin-bottom: 10px;
-}
-
-/* Optional: Make image responsive */
-img {
+#mainPic {
   max-width: 100%;
   height: auto;
+  border: 1px solid #aaa;
+  margin-bottom: 1rem;
+}
+
+.feature {
+  margin-bottom: 1rem;
+}
+.feature .label {
+  font-weight: bold;
+}
+
+/* Ingredients, Equipment, Directions styling */
+#ingredients ul,
+#equipment ul,
+#directions ol {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+/* Add hover to footer link if any */
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
